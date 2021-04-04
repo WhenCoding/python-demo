@@ -22,7 +22,7 @@ def send(text, img_src):
     # 构建POST参数
     params = {
         "access_token": access_token,
-        "status": text +" https://mynamecoder.com"
+        "status": text +" https://mynamecoder.com/about/"
     }
     # 构建二进制multipart/form-data编码的参数
     response = requests.get(img_src)

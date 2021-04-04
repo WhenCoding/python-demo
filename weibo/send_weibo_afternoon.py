@@ -23,7 +23,7 @@ def send(text):
     # 构建POST参数
     params = {
         "access_token": access_token,
-        "status": text +" https://mynamecoder.com"
+        "status": text +" https://mynamecoder.com/about/"
     }
 
     res = requests.post(url, data=params)
