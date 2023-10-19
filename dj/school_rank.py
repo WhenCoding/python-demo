@@ -25,19 +25,16 @@ print('每页返回记录数：',limit)
 for i in range(total//limit):
     result = requests.get(request_url.format(i+1,limit))
     result_json = result.json()
-    for school in result_json['data']:
-        print(school)
+    # for school in result_json['data']:
+    #     print(school)
     print('page:',i+1)
     time.sleep(1)
     # 将school放入list中，然后输出到文件
-    school_list.append(school)
+    school_list.extend(result_json['data'])
+    # if i==2:
+    #     break
 
 with open('school_rank.json', 'w') as f:
-    json.dump(school_list, f,ensure_ascii=False).encode('utf-8')
+    json.dump(school_list, f,ensure_ascii=False)
     f.close()
     print('school_rank.json saved')
-
-
-
-# with open(os.path.join(model_out_path, 'index.json'), 'wb') as f:
-#     f.write(index.content)  # 这句话自带文件关闭功能，不需要再写f.close()
