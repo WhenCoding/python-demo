@@ -31,8 +31,8 @@ for i in range(total//limit):
     time.sleep(1)
     # 将school放入list中，然后输出到文件
     school_list.extend(result_json['data'])
-    # if i==2:
-    #     break
+    if i==2:
+        break
 
 with open('school_rank.json', 'w') as f:
     json.dump(school_list, f,ensure_ascii=False)
