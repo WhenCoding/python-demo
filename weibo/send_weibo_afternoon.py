@@ -5,14 +5,14 @@ import requests
 
 # 刘文朋
 # access_token = '2.00r9ympF0WoQcZd71aa0044dHGYLGB'
-access_token = '2.00g6pZNE0WoQcZd81de3716buPgpUC'
+access_token = 'xx'
 
 url = "https://api.weibo.com/2/statuses/share.json"
 
 
 def get_msg():
     url = "http://api.tianapi.com/txapi/saylove/index"
-    params = {"key": "6c6f404af4e09207be9c10f632a768a3"}
+    params = {"key": "xx"}
     text = requests.get(url=url, params=params).text
     msg = json.loads(text)
     print(msg.get('newslist')[0])

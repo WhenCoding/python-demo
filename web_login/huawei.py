@@ -9,8 +9,8 @@ from selenium.webdriver.common.by import By
 
 from selenium.common.exceptions import NoSuchElementException
 
-account_list = [{"username": "mynamecoder@163.com", "password": "lovetoday#29"},
-                {"username": "17092163015", "password": "coder#1024"}]
+account_list = [{"username": "xx", "password": "xx"},
+                {"username": "xx", "password": "xx"}]
 options = webdriver.ChromeOptions()
 # todo linux 需要设置 有界面或者无界面
 options.add_argument('--headless')
@@ -85,7 +85,7 @@ def send_text(msg):
         "msgtype": "text",
         "text": {
             "content": msg,
-            "mentioned_mobile_list": ["13137437121"]
+            "mentioned_mobile_list": ["xx"]
         }
     }
     r = requests.post(url, headers=headers, json=data)

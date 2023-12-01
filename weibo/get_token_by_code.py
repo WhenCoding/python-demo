@@ -6,9 +6,9 @@ try:
 except ImportError:
     from urllib import urlencode
 
-API_KEY = '526292860'
-API_SECRET = '7423f8a7ccdcfbfdba3b8690ff394a69'
-CODE = '283ff858e70ae4fbf9ed0dce273f16d7'
+API_KEY = 'xx'
+API_SECRET = 'xx'
+CODE = 'xx'
 REDIRECT_URI = 'https://mynamecoder.com'
 access_token_url = 'https://api.weibo.com/oauth2/access_token'
 

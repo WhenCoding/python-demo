@@ -43,7 +43,7 @@ def send_text(msg):
             "msgtype": "text",
             "text": {
                 "content": msg,
-                "mentioned_mobile_list": ["13137437121"]
+                "mentioned_mobile_list": ["xx"]
             }
        }
     r = requests.post(url, headers=headers, json=data)

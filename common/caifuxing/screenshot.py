@@ -3,7 +3,7 @@ import time
 
 from pyppeteer import launch
 
-html_url = 'http://wechat.ewrwefg.com/pushwarningdetail?uuid=a336131c290711edb1bfe4434ba66c88&infoid=a336131c290711edb1bfe4434ba66c88&openid=735ostdt1AWVKQfVENFN9hsomc1Fll083-5&appkey=yqms'
+html_url = 'http://wechat.ewrwefg.com/pushwarningdetail'
 img_path = '/Users/xin/Desktop/test.png'
 
 
