@@ -143,7 +143,7 @@ if __name__ == '__main__':
         os.mkdir(save_temporary_ts_path)
     start_time = time.time()
     ###m3u8_url链接自己找哈！
-    m3u8_url = 'https://voice.caifuxingketang.com/xb_sound/202052/ixjHLDhJSEWicAUee4heiH/ixjHLDhJSEWicAUee4heiH.m3u8?auth_key=1660668642-mWvdgkH75wfnMiiu5cNut5-0-7478872e989137da1f5a035b59624752'
+    m3u8_url = 'https://voice.caifuxingketang.com/xb_sound/202052/ixjHLDhJSEWicAUee4heiH/ixjHLDhJSEWicAUee4heiH.m3u8?auth_key='
     begin()
     end_time = time.time()
     print(f'总共耗时：{end_time - start_time}秒')

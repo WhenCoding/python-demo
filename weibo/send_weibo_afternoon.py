@@ -4,7 +4,6 @@ import time
 import requests
 
 # 刘文朋
-# access_token = '2.00r9ympF0WoQcZd71aa0044dHGYLGB'
 access_token = 'xx'
 
 url = "https://api.weibo.com/2/statuses/share.json"
