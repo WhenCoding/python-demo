@@ -34,7 +34,7 @@ def sign(browser):
         if handle != main_windows:
             browser.switch_to.window(handle)
     # 打印页面信息
-    print(browser.page_source)
+    # print(browser.page_source)
     WebDriverWait(browser, 20).until(
         EC.visibility_of_element_located((By.ID, "homeheader-signin"))).click()
     # except Exception as e:

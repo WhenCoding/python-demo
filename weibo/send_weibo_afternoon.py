@@ -1,7 +1,8 @@
-import requests
-from io import BytesIO
 import json
 import time
+
+import requests
+
 # 刘文朋
 # access_token = '2.00r9ympF0WoQcZd71aa0044dHGYLGB'
 access_token = '2.00g6pZNE0WoQcZd81de3716buPgpUC'
@@ -33,4 +34,4 @@ if __name__ == '__main__':
     # 格式化成2016-03-20 11:45:39形式
     print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
     msg = get_msg()
-    send("[小红花]"+msg.get('content')+" 午安～")
+    send("[鲜花]"+msg.get('content')+" 午安～")

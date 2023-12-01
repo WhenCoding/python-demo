@@ -1,7 +1,8 @@
-import requests
-from io import BytesIO
 import json
 import time
+from io import BytesIO
+
+import requests
 
 access_token = '2.00g6pZNE0WoQcZd81de3716buPgpUC'
 

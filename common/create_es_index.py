@@ -2,10 +2,10 @@ from elasticsearch import Elasticsearch
 import json
 import datetime
 import requests
-qyapi_url="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=77b1b9c6-6fdf-4a98-9568-8ae551701e99"
+qyapi_url="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key={}"
 indices_list=["printmedia","twitter","web","wechat","search","blog","app","shortvideo","tvvideo","forum","tieba","netvideo","facebook","weibo"]
 today=datetime.date.today()
-es=Elasticsearch(["192.168.17.30:9210"])
+es=Elasticsearch(["ip:port"])
 tomorrow =  (today + datetime.timedelta(days=1)).strftime('%Y%m%d')  # 用今天日期加上时间差，参数为1天，获得明天的日期
 for indice in indices_list:
   results="True"

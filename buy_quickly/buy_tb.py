@@ -63,5 +63,5 @@ if __name__ == '__main__':
     browser = webdriver.Chrome()
     login()
     picking(0)
-    buy_time = "2020-06-21 19:34:00.00.000"
+    buy_time = "2020-07-01 20:00.00.000"
     buy(buy_time)
