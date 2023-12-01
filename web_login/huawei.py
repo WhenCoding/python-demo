@@ -79,7 +79,7 @@ def login_by_email():
 
 
 def send_text(msg):
-    url = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=e88a795a-6215-4e4f-807c-111f356655f2"
+    url = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=xx"
     headers = {"Content-Type": "text/plain"}
     data = {
         "msgtype": "text",
