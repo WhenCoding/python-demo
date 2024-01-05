@@ -3,9 +3,9 @@ import os
 import requests
 
 base_path = os.path.dirname(os.path.abspath(__file__))
-save_folder = base_path + "/school_rank"  # 指定的本地文件夹路径
+save_folder = base_path + "/major_detail"  # 指定的本地文件夹路径
 school_list = []
-oss_path = 'school_rank/img/'
+oss_path = 'major_detail/img/'
 
 def download_image(url, folder_path):
     # 创建文件夹
@@ -29,19 +29,19 @@ def download_image(url, folder_path):
     return ''
 
 
-with open(base_path + '/school_rank_detail.json', 'r') as f:
+with open(base_path + '/major_detail.json', 'r') as f:
     for line in f:
         json_obj = json.loads(line)
         # 对json对象进行处理
-        print(json_obj['School_Logo_100'])
-        file_path = download_image(json_obj['School_Logo_100'],save_folder)
-        json_obj['School_Logo_100']=oss_path + file_path
+        print(json_obj['LxSchoolLogo'])
+        file_path = download_image(json_obj['LxSchoolLogo'],save_folder)
+        json_obj['LxSchoolLogo']=oss_path + file_path
         school_list.append(json_obj)
         # break
         
 
 # 打开文件，准备写入数据
-with open(base_path + "/school_rank_turn_img.json", "w") as f:
+with open(base_path + "/major_detail_turn_img.json", "w") as f:
     # 遍历数组中的每个JSON对象
     for obj in school_list:
         # 将JSON对象转换为字符串
