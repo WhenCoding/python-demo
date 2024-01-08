@@ -40,7 +40,7 @@ for i in range(total//limit):
     print('page:',i+1)
     # time.sleep(1)
     # 将marjor放入list中，然后输出到文件
-    for marjor in result_json['data']:
+    for marjor in major_result_json['data']:
         current_request_detail_url = request_detail_url.format(marjor['CrmMajorId'])
         # print(current_request_detail_url,marjor['Id'])
         # time.sleep(1)
@@ -50,7 +50,8 @@ for i in range(total//limit):
         # print(json.dumps(json_obj['data'],ensure_ascii=False))
         marjor_detail_list.append(json_obj['data'])
     #     break
-    # break
+    if i == 3:
+        break
 
 out(major_list,'major_list.json')
 out(marjor_detail_list,'marjor_detail_list.json')
