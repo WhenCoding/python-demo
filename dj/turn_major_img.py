@@ -29,15 +29,19 @@ def download_image(url, folder_path):
     return ''
 
 
-with open(base_path + '/major_detail.json', 'r') as f:
+with open(base_path + '/marjor_detail_list.json', 'r') as f:
     for line in f:
         json_obj = json.loads(line)
-        # 对json对象进行处理
-        print(json_obj['LxSchoolLogo'])
-        file_path = download_image(json_obj['LxSchoolLogo'],save_folder)
-        json_obj['LxSchoolLogo']=oss_path + file_path
+        try:
+            if 'LxSchoolLogo' in json_obj:
+                # 对json对象进行处理
+                print(json_obj['LxSchoolLogo'])
+                file_path = download_image(json_obj['LxSchoolLogo'],save_folder)
+                json_obj['LxSchoolLogo']=oss_path + file_path
+                # break
+        except Exception as e:
+            print("发生了异常：", e)
         school_list.append(json_obj)
-        # break
         
 
 # 打开文件，准备写入数据
